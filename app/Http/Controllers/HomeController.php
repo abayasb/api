@@ -25,4 +25,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
+    public function register()
+    {
+        var_dump("Entro");
+        return "Entro";
+    }
 }

@@ -40,4 +40,14 @@ class Articulo extends Model
     {
         return $this->belongsTo(Marca::class);
     }
+
+    /**
+     * Get all of the compras for the Articulo
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function compras(): HasMany
+    {
+        return $this->hasMany(Compra::class, 'id_articulo', 'id');
+    }
 }

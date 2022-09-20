@@ -13,7 +13,7 @@ class UpdateProveedorRespuest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class UpdateProveedorRespuest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'codproveedor'=>'required|max:20|unique:proveedors,codproveedor,'.$this->route('proveedor')->id,
+            'nombre_ape'=>'required|max:150',
+            'direccion'=>'required|max:250',
+            'email'=>'required|unique:proveedors,email,'.$this->route('proveedor')->id,
+            'telefono'=>'required|max:10'
         ];
     }
 }

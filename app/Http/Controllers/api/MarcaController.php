@@ -19,12 +19,7 @@ class MarcaController extends Controller
     public function index()
     {
         $marca = Marca::all();
-        if ($marca) {
-           return response()->json([
-            'status'=>"ok",
-            'marca'=>$marca
-           ]);
-        }
+        return $marca;
     }
 
     /**

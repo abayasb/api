@@ -13,7 +13,7 @@ class SaveProveedorRespuest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class SaveProveedorRespuest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'codproveedor'=>'required|max:20|unique:proveedors,codproveedor',
+            'nombre_ape'=>'required|max:150',
+            'direccion'=>'required|max:250',
+            'email'=>'required|email:rfc,dns',
+            'telefono'=>'required|max:10'
         ];
     }
 }

@@ -20,11 +20,7 @@ class ArticuloController extends Controller
     {
         //
         $articulo= Articulo::all();
-        return response()->json([
-            'status' =>'OK',
-            'message'=>'Registro encontrado',
-            'articulo'=>$articulo
-        ]);
+        return $articulo;
     }
 
     /**

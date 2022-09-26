@@ -39,22 +39,23 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        $this->middleware('auth::api',['except'=>['login','register']]);
     }
 
     public function login(Request $request)
     {
+        # code...
         $rules = [
             'username' => 'required',
             'password' => 'required|min:8|max:100'
         ];
 
         $message = [
-            'username.required' => 'Llene el campo de correo',
+            'username.required' => 'Ingrese usuario',
             'password.required' => 'Ingrese su contraseña',
             'password.min' => 'La contraseña debe de tener mínimo 8 caracteres',
             'password.max' => 'La contraseña tiene muchos caracteres'
         ];
+
         $validator = Validator::make($request->all(), $rules, $message);
         if ($validator->fails()) {
             return back()
@@ -82,5 +83,4 @@ class LoginController extends Controller
             }
         }
     }
-
 }

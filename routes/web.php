@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use  GuzzleHttp\Exception\ClientException ;
@@ -22,18 +24,15 @@ use Illuminate\Support\Facades\Http;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/tipo', function () {
-    return Http::get('http://127.0.0.1:8080/api/v1/marca')['codmarca'];
-});
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'tipo'])->name('home');
+Route::prefix('venta')->group(function(){
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/login',[LoginController::class,'login'])->name('login');
 Route::post('/register', [RegisterController::class, 'create'])->name('register');
+Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
+Route::get('/tipo',[HomeController::class,'tipo'])->name('viewTipo');
+Route::get('/marca',[HomeController::class,'marca'])->name('viewMarca');
 
-Route::get('/marca', function() {
-    //$client = new GuzzleHttp\Client(['base_uri' => 'https://my-json-server.typicode.com/typicode/demo/posts', 'timeout'  => 2.0]);
-    $client = Http::get('https://my-json-server.typicode.com/typicode/demo/posts');
-    dd($client);
 });
-

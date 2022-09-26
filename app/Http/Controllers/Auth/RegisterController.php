@@ -50,6 +50,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+       
         return Validator::make($data, [
             'username' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
@@ -59,14 +60,49 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $request
+     * @param  array  $data
      * @return \App\Models\User
      */
     protected function create(Request $request)
     {
-        return User::create([
-            'username' => $request['username'],
-            'password' => Hash::make($request['password']),
-        ]);
+        
+        $rules =[ 
+            'username'=>'required',
+            'password' => 'required|min:8',
+            'password_confirmation' => 'required|min:8|same:password',
+        ];
+        $message = [
+            'username.required' => 'Llene el campo nombre',
+            'password.required' => 'Tiene que colocar contraseña',
+            'password.min' => 'La contraseña debe tener al menos 8 caracteres',
+            'password_confirmation.required' => 'Confirme la contraseña',
+            'password_confirmation.min' => 'La contraseña debe tener almenos 8 caracteres',
+            'password_confirmation.same' => 'La contraseña no coiciden',
+        ];
+        
+        $validator = Validator::make($request->all(), $rules, $message);
+        if ($validator->fails()) {
+            return back()->withErrors($validator)
+            ->with('message', 'Se ha producido un error ')
+            ->with('alert', 'danger');
+        }else{
+            try {
+                $user = new User();
+                $user->username = e($request->input('username'));
+                $user->password = Hash::make($request->input('password'));
+                $user->id_persona = 1;
+                $user->id_rol= 1;
+                
+                if ($user->save()) {
+                    return redirect('/login')
+                        ->with('message', 'Datos guardados correctamente')
+                        ->with('alert', 'success');
+                }
+            } catch (\Throwable $th) {
+                return back()
+                ->with('message', 'Error al enviar los datos')
+                ->with('alert', 'danger');
+            }
+        }
     }
 }

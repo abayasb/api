@@ -37,11 +37,12 @@ class TipoController extends Controller
      */
     public function store(SaveTipoRequest $request)
     {
-        try {
+        
             $request->validated();
             $tipos = new Tipo();
             $tipos->codtipo = strtoupper(e($request->input('codtipo')));
             $tipos->detalle = strtoupper(e($request->input('detalle')));
+            $tipos->save();
             if ($tipos->save()) {
                 return response()->json([
                     'status'=>'OK',
@@ -53,13 +54,7 @@ class TipoController extends Controller
                 'status' => 'Error',
                 'message' => "No se pudo guardar el registro"
             ]);
-        } catch (\Throwable $th) {
-            return response()->json([
-                'status' => 'Error',
-                'message' => "Hubo un error",
-                'error' => $th
-            ]);
-        }
+        
         
     }
 

@@ -22,6 +22,9 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('tipo-component', require('./components/TipoComponent.vue').default);
 Vue.component('marca-component', require('./components/MarcaComponent.vue').default);
+Vue.component('proveedor-component', require('./components/ProveedorComponent.vue').default);
+Vue.component('articulo-component', require('./components/ArticuloComponent.vue').default);
+Vue.component('compra-component', require('./components/CompraComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

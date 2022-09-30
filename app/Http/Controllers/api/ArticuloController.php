@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SaveArticuloRequest;
 use App\Http\Requests\UpdateArticuloRequest;
 use App\Models\Articulo;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Artisan;
+use App\Models\Tipo;
+
 
 class ArticuloController extends Controller
 {
@@ -19,10 +19,9 @@ class ArticuloController extends Controller
     public function index()
     {
         //
-        $articulo= Articulo::all();
-        return $articulo;
+        $articulo = Articulo::with('Tipo','Marca')->get();
+        return response()->json($articulo, 200,);
     }
-
     /**
      * Store a newly created resource in storage.
      *

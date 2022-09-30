@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Marca extends Model
@@ -20,7 +21,7 @@ class Marca extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Articulos(): HasMany
+    public function articulos(): HasMany
     {
         return $this->hasMany(Articulo::class, 'id_marca');
     }

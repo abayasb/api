@@ -5302,6 +5302,211 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ArticuloComponent.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ArticuloComponent.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var url = 'http://localhost:8000/api/v1/articulo/';
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      articulos: [],
+      marcas: [],
+      tipos: [],
+      dialog: false,
+      operacion: '',
+      articulo: {
+        id: null,
+        codarticulo: '',
+        detalle: '',
+        valorcompra: '',
+        valorventa: '',
+        id_marca: '',
+        id_tipo: ''
+      }
+    };
+  },
+  created: function created() {
+    this.mostrar();
+  },
+  methods: {
+    mostrar: function mostrar() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
+        _this.articulos = response.data;
+      });
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:8000/api/v1/marca').then(function (response) {
+        _this.marcas = response.data;
+      });
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:8000/api/v1/tipo').then(function (response) {
+        _this.tipos = response.data['tipo'];
+      });
+    },
+    create_articulo: function create_articulo() {
+      var _this2 = this;
+
+      var params = {
+        codarticulo: this.articulo.codarticulo,
+        detalle: this.articulo.detalle,
+        stock: 5,
+        valorcompra: this.articulo.valorcompra,
+        valorventa: this.articulo.valorventa,
+        id_tipo: this.articulo.id_tipo,
+        id_marca: this.articulo.id_marca
+      };
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post(url, params).then(function (response) {
+        var addArticulo = response.data;
+
+        _this2.articulos.push(addArticulo);
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -5481,6 +5686,213 @@ var url = "http://localhost:8000/api/v1/marca";
       });
       this.marca.codmarca = '';
       this.marca.detalle = '';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ProveedorComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ProveedorComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var url = 'http://localhost:8000/api/v1/proveedor/';
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      proveedores: [],
+      dialog: false,
+      operacion: '',
+      proveedor: {
+        id: null,
+        codproveedor: '',
+        nombre_ape: '',
+        direccion: '',
+        email: '',
+        telefono: ''
+      }
+    };
+  },
+  created: function created() {
+    this.mostrar();
+  },
+  methods: {
+    mostrar: function mostrar() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
+        _this.proveedores = response.data['proveedor'];
+      });
+    },
+    create_proveedor: function create_proveedor() {
+      var _this2 = this;
+
+      var params = {
+        codproveedor: this.proveedor.codproveedor,
+        nombre_ape: this.proveedor.nombre_ape,
+        direccion: this.proveedor.direccion,
+        email: this.proveedor.email,
+        telefono: this.proveedor.telefono
+      };
+      console.log(params);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post(url, params).then(function (response) {
+        _this2.proveedor.push(response.data);
+      });
+      this.proveedor.codproveedor = '';
+      this.proveedor.nombre_ape = '';
+      this.proveedor.direccion = '';
+      this.proveedor.email = '';
+      this.proveedor.telefono = '';
     }
   }
 });
@@ -5690,6 +6102,9 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 Vue.component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
 Vue.component('tipo-component', (__webpack_require__(/*! ./components/TipoComponent.vue */ "./resources/js/components/TipoComponent.vue")["default"]));
 Vue.component('marca-component', (__webpack_require__(/*! ./components/MarcaComponent.vue */ "./resources/js/components/MarcaComponent.vue")["default"]));
+Vue.component('proveedor-component', (__webpack_require__(/*! ./components/ProveedorComponent.vue */ "./resources/js/components/ProveedorComponent.vue")["default"]));
+Vue.component('articulo-component', (__webpack_require__(/*! ./components/ArticuloComponent.vue */ "./resources/js/components/ArticuloComponent.vue")["default"]));
+Vue.component('compra-component', (__webpack_require__(/*! ./components/CompraComponent.vue */ "./resources/js/components/CompraComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -28402,6 +28817,82 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./resources/js/components/ArticuloComponent.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/ArticuloComponent.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ArticuloComponent_vue_vue_type_template_id_57015a87___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticuloComponent.vue?vue&type=template&id=57015a87& */ "./resources/js/components/ArticuloComponent.vue?vue&type=template&id=57015a87&");
+/* harmony import */ var _ArticuloComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ArticuloComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ArticuloComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ArticuloComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ArticuloComponent_vue_vue_type_template_id_57015a87___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ArticuloComponent_vue_vue_type_template_id_57015a87___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ArticuloComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/CompraComponent.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/CompraComponent.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _CompraComponent_vue_vue_type_template_id_ac5c8bf8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CompraComponent.vue?vue&type=template&id=ac5c8bf8& */ "./resources/js/components/CompraComponent.vue?vue&type=template&id=ac5c8bf8&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _CompraComponent_vue_vue_type_template_id_ac5c8bf8___WEBPACK_IMPORTED_MODULE_0__.render,
+  _CompraComponent_vue_vue_type_template_id_ac5c8bf8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CompraComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue":
 /*!******************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue ***!
@@ -28480,6 +28971,45 @@ component.options.__file = "resources/js/components/MarcaComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/ProveedorComponent.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/ProveedorComponent.vue ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ProveedorComponent_vue_vue_type_template_id_418c842c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProveedorComponent.vue?vue&type=template&id=418c842c& */ "./resources/js/components/ProveedorComponent.vue?vue&type=template&id=418c842c&");
+/* harmony import */ var _ProveedorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProveedorComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ProveedorComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ProveedorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProveedorComponent_vue_vue_type_template_id_418c842c___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ProveedorComponent_vue_vue_type_template_id_418c842c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ProveedorComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/TipoComponent.vue":
 /*!***************************************************!*\
   !*** ./resources/js/components/TipoComponent.vue ***!
@@ -28519,6 +29049,22 @@ component.options.__file = "resources/js/components/TipoComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/ArticuloComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/ArticuloComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticuloComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ArticuloComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ArticuloComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticuloComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -28551,6 +29097,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/ProveedorComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/ProveedorComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProveedorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ProveedorComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ProveedorComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProveedorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/TipoComponent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************!*\
   !*** ./resources/js/components/TipoComponent.vue?vue&type=script&lang=js& ***!
@@ -28564,6 +29126,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TipoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TipoComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/TipoComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TipoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/ArticuloComponent.vue?vue&type=template&id=57015a87&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/ArticuloComponent.vue?vue&type=template&id=57015a87& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticuloComponent_vue_vue_type_template_id_57015a87___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticuloComponent_vue_vue_type_template_id_57015a87___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticuloComponent_vue_vue_type_template_id_57015a87___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ArticuloComponent.vue?vue&type=template&id=57015a87& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ArticuloComponent.vue?vue&type=template&id=57015a87&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/CompraComponent.vue?vue&type=template&id=ac5c8bf8&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/CompraComponent.vue?vue&type=template&id=ac5c8bf8& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CompraComponent_vue_vue_type_template_id_ac5c8bf8___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CompraComponent_vue_vue_type_template_id_ac5c8bf8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CompraComponent_vue_vue_type_template_id_ac5c8bf8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CompraComponent.vue?vue&type=template&id=ac5c8bf8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CompraComponent.vue?vue&type=template&id=ac5c8bf8&");
+
 
 /***/ }),
 
@@ -28601,6 +29197,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/ProveedorComponent.vue?vue&type=template&id=418c842c&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/ProveedorComponent.vue?vue&type=template&id=418c842c& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProveedorComponent_vue_vue_type_template_id_418c842c___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProveedorComponent_vue_vue_type_template_id_418c842c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProveedorComponent_vue_vue_type_template_id_418c842c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ProveedorComponent.vue?vue&type=template&id=418c842c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ProveedorComponent.vue?vue&type=template&id=418c842c&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/TipoComponent.vue?vue&type=template&id=5215b964&":
 /*!**********************************************************************************!*\
   !*** ./resources/js/components/TipoComponent.vue?vue&type=template&id=5215b964& ***!
@@ -28614,6 +29227,1075 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TipoComponent_vue_vue_type_template_id_5215b964___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TipoComponent_vue_vue_type_template_id_5215b964___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TipoComponent.vue?vue&type=template&id=5215b964& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/TipoComponent.vue?vue&type=template&id=5215b964&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ArticuloComponent.vue?vue&type=template&id=57015a87&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ArticuloComponent.vue?vue&type=template&id=57015a87& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("section", { staticClass: "full-width pageContent" }, [
+    _c("div", { staticClass: "full-width divider-menu-h" }),
+    _vm._v(" "),
+    _c("div", { staticClass: "mdl-tabs mdl-js-tabs mdl-js-ripple-effect" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "mdl-tabs__panel is-active",
+          attrs: { id: "tabNewKardex" },
+        },
+        [
+          _c("div", { staticClass: "mdl-grid" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop",
+              },
+              [
+                _c("div", { staticClass: "full-width panel mdl-shadow--2dp" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "full-width panel-tittle bg-primary text-center tittles",
+                    },
+                    [
+                      _vm._v(
+                        "\n                            NUEVO ARTICULO\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "full-width panel-content" }, [
+                    _c(
+                      "form",
+                      {
+                        on: {
+                          submit: function ($event) {
+                            $event.preventDefault()
+                            return _vm.create_articulo.apply(null, arguments)
+                          },
+                        },
+                      },
+                      [
+                        _c("div", { staticClass: "mdl-grid" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop",
+                            },
+                            [
+                              _c("h5", { staticClass: "text-condensedLight" }, [
+                                _vm._v("Datos a ingresar"),
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "mdl-textfield mdl-js-textfield",
+                                },
+                                [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.articulo.codarticulo,
+                                        expression: "articulo.codarticulo",
+                                      },
+                                    ],
+                                    staticClass: "mdl-textfield__input",
+                                    attrs: {
+                                      type: "text",
+                                      pattern:
+                                        "?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\\.[0-9]+)?",
+                                      id: "id_codarticulo",
+                                    },
+                                    domProps: {
+                                      value: _vm.articulo.codarticulo,
+                                    },
+                                    on: {
+                                      input: function ($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.articulo,
+                                          "codarticulo",
+                                          $event.target.value
+                                        )
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "mdl-textfield__label",
+                                      attrs: { for: "CodProduct" },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Código del\n                                                Artículo"
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdl-textfield__error" },
+                                    [_vm._v("Código Invalida")]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "mdl-textfield mdl-js-textfield",
+                                },
+                                [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.articulo.detalle,
+                                        expression: "articulo.detalle",
+                                      },
+                                    ],
+                                    staticClass: "mdl-textfield__input",
+                                    attrs: { type: "text", id: "id_detalle" },
+                                    domProps: { value: _vm.articulo.detalle },
+                                    on: {
+                                      input: function ($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.articulo,
+                                          "detalle",
+                                          $event.target.value
+                                        )
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "mdl-textfield__label",
+                                      attrs: { for: "id_detalle" },
+                                    },
+                                    [_vm._v("detalle")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdl-textfield__error" },
+                                    [_vm._v("Nombre inválido")]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                },
+                                [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.articulo.valorcompra,
+                                        expression: "articulo.valorcompra",
+                                      },
+                                    ],
+                                    staticClass: "mdl-textfield__input",
+                                    attrs: {
+                                      type: "number",
+                                      pattern: "-?[0-9- ]*(\\.[0-9]+)?",
+                                      id: "CompraCode",
+                                    },
+                                    domProps: {
+                                      value: _vm.articulo.valorcompra,
+                                    },
+                                    on: {
+                                      input: function ($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.articulo,
+                                          "valorcompra",
+                                          $event.target.value
+                                        )
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "mdl-textfield__label",
+                                      attrs: { for: "CompraCode" },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Valor de\n                                                Compra"
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdl-textfield__error" },
+                                    [_vm._v("Valor no válido")]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                },
+                                [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.articulo.valorventa,
+                                        expression: "articulo.valorventa",
+                                      },
+                                    ],
+                                    staticClass: "mdl-textfield__input",
+                                    attrs: {
+                                      type: "number",
+                                      pattern: "-?[0-9- ]*(\\.[0-9]+)?",
+                                      id: "VentaCode",
+                                    },
+                                    domProps: {
+                                      value: _vm.articulo.valorventa,
+                                    },
+                                    on: {
+                                      input: function ($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.articulo,
+                                          "valorventa",
+                                          $event.target.value
+                                        )
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "mdl-textfield__label",
+                                      attrs: { for: "VentaCode" },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Valor de\n                                                Venta"
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdl-textfield__error" },
+                                    [_vm._v("Valor no válido")]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                },
+                                [
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.articulo.id_tipo,
+                                          expression: "articulo.id_tipo",
+                                        },
+                                      ],
+                                      staticClass: "mdl-textfield__input",
+                                      on: {
+                                        change: function ($event) {
+                                          var $$selectedVal =
+                                            Array.prototype.filter
+                                              .call(
+                                                $event.target.options,
+                                                function (o) {
+                                                  return o.selected
+                                                }
+                                              )
+                                              .map(function (o) {
+                                                var val =
+                                                  "_value" in o
+                                                    ? o._value
+                                                    : o.value
+                                                return val
+                                              })
+                                          _vm.$set(
+                                            _vm.articulo,
+                                            "id_tipo",
+                                            $event.target.multiple
+                                              ? $$selectedVal
+                                              : $$selectedVal[0]
+                                          )
+                                        },
+                                      },
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            value: "",
+                                            disabled: "",
+                                            selected: "",
+                                          },
+                                        },
+                                        [_vm._v("Selecciona el tipo ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._l(_vm.tipos, function (tipo) {
+                                        return _c(
+                                          "option",
+                                          { domProps: { value: tipo.id } },
+                                          [_vm._v(_vm._s(tipo.detalle))]
+                                        )
+                                      }),
+                                    ],
+                                    2
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                },
+                                [
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.articulo.id_marca,
+                                          expression: "articulo.id_marca",
+                                        },
+                                      ],
+                                      staticClass: "mdl-textfield__input",
+                                      on: {
+                                        change: function ($event) {
+                                          var $$selectedVal =
+                                            Array.prototype.filter
+                                              .call(
+                                                $event.target.options,
+                                                function (o) {
+                                                  return o.selected
+                                                }
+                                              )
+                                              .map(function (o) {
+                                                var val =
+                                                  "_value" in o
+                                                    ? o._value
+                                                    : o.value
+                                                return val
+                                              })
+                                          _vm.$set(
+                                            _vm.articulo,
+                                            "id_marca",
+                                            $event.target.multiple
+                                              ? $$selectedVal
+                                              : $$selectedVal[0]
+                                          )
+                                        },
+                                      },
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            value: "",
+                                            disabled: "",
+                                            selected: "",
+                                          },
+                                        },
+                                        [_vm._v("Selecciona la marca ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._l(_vm.marcas, function (marca) {
+                                        return _c(
+                                          "option",
+                                          { domProps: { value: marca.id } },
+                                          [_vm._v(_vm._s(marca.detalle))]
+                                        )
+                                      }),
+                                    ],
+                                    2
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(1),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "mdl-tooltip",
+                            attrs: { for: "btn-addProduct" },
+                          },
+                          [_vm._v("Agregar Compra")]
+                        ),
+                        _vm._v(" "),
+                        _c("p"),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "mdl-tabs__panel", attrs: { id: "tabListKardex" } },
+        [
+          _c("div", { staticClass: "mdl-grid" }, [
+            _c(
+              "table",
+              {
+                staticClass:
+                  "mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive",
+              },
+              [
+                _vm._m(2),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.articulos, function (articulo) {
+                    return _c("tr", { key: articulo.id }, [
+                      _c("td", [_vm._v(_vm._s(articulo.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.codarticulo))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.detalle))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.marca.detalle))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.tipo.detalle))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.stock))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.valorcompra))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.valorventa))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(articulo.created_at))]),
+                      _vm._v(" "),
+                      _vm._m(3, true),
+                    ])
+                  }),
+                  0
+                ),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mdl-tabs__tab-bar" }, [
+      _c(
+        "a",
+        {
+          staticClass: "mdl-tabs__tab is-active",
+          attrs: { href: "#tabNewKardex" },
+        },
+        [_vm._v("NUEVO")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "mdl-tabs__tab", attrs: { href: "#tabListKardex" } },
+        [_vm._v("LISTA")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "text-center" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary",
+          attrs: { id: "btn-addProduct" },
+        },
+        [_c("i", { staticClass: "zmdi zmdi-plus" })]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("ID Artículo: ")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Cod Artículo")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Detalle")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Marca")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Tipo")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Stock")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Valor de Compra")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Valor de Venta")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Fecha Carga")]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c(
+        "button",
+        {
+          staticClass:
+            "mdl-button mdl-js-button mdl-button--raised mdl-button--accent",
+        },
+        [
+          _vm._v(
+            "\n                                    editar\n                                "
+          ),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CompraComponent.vue?vue&type=template&id=ac5c8bf8&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CompraComponent.vue?vue&type=template&id=ac5c8bf8& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "full-width pageContent" }, [
+      _c("div", { staticClass: "full-width divider-menu-h" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "mdl-tabs mdl-js-tabs mdl-js-ripple-effect" }, [
+        _c("div", { staticClass: "mdl-tabs__tab-bar" }, [
+          _c(
+            "a",
+            {
+              staticClass: "mdl-tabs__tab is-active",
+              attrs: { href: "#tabNewKardex" },
+            },
+            [_vm._v("NUEVO")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "mdl-tabs__tab", attrs: { href: "#tabListKardex" } },
+            [_vm._v("LISTA")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "mdl-tabs__panel is-active",
+            attrs: { id: "tabNewKardex" },
+          },
+          [
+            _c("div", { staticClass: "mdl-grid" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop",
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "full-width panel mdl-shadow--2dp" },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "full-width panel-tittle bg-primary text-center tittles",
+                        },
+                        [
+                          _vm._v(
+                            "\n                            NUEVA COMPRA\n                        "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "full-width panel-content" }, [
+                        _c("form", [
+                          _c("div", { staticClass: "mdl-grid" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop",
+                              },
+                              [
+                                _c(
+                                  "h5",
+                                  { staticClass: "text-condensedLight" },
+                                  [_vm._v("Datos a ingresar")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield",
+                                  },
+                                  [
+                                    _c(
+                                      "select",
+                                      { staticClass: "mdl-textfield__input" },
+                                      [
+                                        _c(
+                                          "option",
+                                          {
+                                            attrs: {
+                                              value: "",
+                                              disabled: "",
+                                              selected: "",
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "Seleccionar Articulo\n                                                "
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("option", { attrs: { value: "" } }, [
+                                          _vm._v("Articulo 1"),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("option", { attrs: { value: "" } }, [
+                                          _vm._v("Articulo 2"),
+                                        ]),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield",
+                                  },
+                                  [
+                                    _c(
+                                      "select",
+                                      { staticClass: "mdl-textfield__input" },
+                                      [
+                                        _c(
+                                          "option",
+                                          {
+                                            attrs: {
+                                              value: "",
+                                              disabled: "",
+                                              selected: "",
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "Seleccionar Proveedor\n                                                "
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("option", { attrs: { value: "" } }, [
+                                          _vm._v("Proveedor 1"),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("option", { attrs: { value: "" } }, [
+                                          _vm._v("Proveedor 2"),
+                                        ]),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "mdl-textfield__input",
+                                      attrs: { type: "text", id: "CodCompra" },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "mdl-textfield__label",
+                                        attrs: { for: "CodCompra" },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Codigo de\n                                                compra"
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdl-textfield__error" },
+                                      [_vm._v("Codigo inválido")]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "mdl-textfield__input",
+                                      attrs: {
+                                        type: "number",
+                                        pattern: "-?[0-9]*(\\.[0-9]+)?",
+                                        id: "CantidadCompra",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "mdl-textfield__label",
+                                        attrs: { for: "CantidadCompra" },
+                                      },
+                                      [_vm._v("Cantidad")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdl-textfield__error" },
+                                      [_vm._v("Cantidad inválido")]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "mdl-textfield__input",
+                                      attrs: {
+                                        type: "number",
+                                        pattern: "-?[0-9]*(\\.[0-9]+)?",
+                                        id: "ValorCompra",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "mdl-textfield__label",
+                                        attrs: { for: "ValorCompra" },
+                                      },
+                                      [_vm._v("Valor")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdl-textfield__error" },
+                                      [_vm._v("Valor inválido")]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                  },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "mdl-textfield__label",
+                                        attrs: { for: "ValorCompra" },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Fecha de la\n                                                venta"
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      attrs: {
+                                        type: "date",
+                                        id: "start",
+                                        name: "trip-start",
+                                        value: "2018-07-22",
+                                        min: "2018-01-01",
+                                        max: "2040-12-31",
+                                      },
+                                    }),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                  },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "mdl-textfield__label",
+                                        attrs: { for: "NameProduct" },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Fecha de carga\n                                            "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                  },
+                                  [
+                                    _c("br"),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "mdl-textfield__label",
+                                        attrs: { for: "NameProduct" },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Total\n                                                Compra"
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "text-center" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary",
+                                attrs: { id: "btn-addProduct" },
+                              },
+                              [_c("i", { staticClass: "zmdi zmdi-plus" })]
+                            ),
+                          ]),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "mdl-tooltip",
+                              attrs: { for: "btn-addProduct" },
+                            },
+                            [_vm._v("Agregar Compra")]
+                          ),
+                          _vm._v(" "),
+                          _c("p"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mdl-tabs__panel", attrs: { id: "tabListKardex" } },
+          [
+            _c("div", { staticClass: "mdl-grid" }, [
+              _c(
+                "table",
+                {
+                  staticClass:
+                    "mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive",
+                },
+                [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", [_vm._v("ID COMPRA")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("PROVEEDOR")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("ARTICULO")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("CANTIDAD")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("VALOR")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("TOTAL")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("FECHA DE COMPRA")]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "mdl-button mdl-js-button mdl-button--raised mdl-button--accent",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                    editar\n                                "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+          ]
+        ),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
 
 
 /***/ }),
@@ -29017,6 +30699,591 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "mdl-textfield__input",
               attrs: { type: "text", id: "searchCategory" },
+            }),
+            _vm._v(" "),
+            _c("label", { staticClass: "mdl-textfield__label" }),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "mdl-list__item-secondary-action", attrs: { href: "#!" } },
+      [_c("i", { staticClass: "zmdi zmdi-more" })]
+    )
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ProveedorComponent.vue?vue&type=template&id=418c842c&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ProveedorComponent.vue?vue&type=template&id=418c842c& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("section", { staticClass: "full-width pageContent" }, [
+    _c("div", { staticClass: "mdl-tabs mdl-js-tabs mdl-js-ripple-effect" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "mdl-tabs__panel is-active",
+          attrs: { id: "tabNewAdmin" },
+        },
+        [
+          _c("div", { staticClass: "mdl-grid" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop",
+              },
+              [
+                _c("div", { staticClass: "full-width panel mdl-shadow--2dp" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "full-width panel-tittle bg-primary text-center tittles",
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Nuevo Proveedor\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "full-width panel-content" }, [
+                    _c(
+                      "form",
+                      {
+                        on: {
+                          submit: function ($event) {
+                            $event.preventDefault()
+                            return _vm.create_proveedor.apply(null, arguments)
+                          },
+                        },
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "mdl-grid" },
+                          [
+                            _c("center", [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop",
+                                },
+                                [
+                                  _c(
+                                    "h5",
+                                    { staticClass: "text-condensedLight" },
+                                    [_vm._v("Datos Proveedor")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                    },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.proveedor.codproveedor,
+                                            expression:
+                                              "proveedor.codproveedor",
+                                          },
+                                        ],
+                                        staticClass: "mdl-textfield__input",
+                                        attrs: {
+                                          type: "text",
+                                          id: "id_codproveedor",
+                                        },
+                                        domProps: {
+                                          value: _vm.proveedor.codproveedor,
+                                        },
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.proveedor,
+                                              "codproveedor",
+                                              $event.target.value
+                                            )
+                                          },
+                                        },
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass: "mdl-textfield__label",
+                                          attrs: { for: "id_codproveedor" },
+                                        },
+                                        [
+                                          _vm._v(
+                                            "Código\n                                                    proveedor"
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdl-textfield__error" },
+                                        [_vm._v("Código inválida")]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                    },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.proveedor.nombre_ape,
+                                            expression: "proveedor.nombre_ape",
+                                          },
+                                        ],
+                                        staticClass: "mdl-textfield__input",
+                                        attrs: {
+                                          type: "text",
+                                          id: "id_nombre_contacto",
+                                        },
+                                        domProps: {
+                                          value: _vm.proveedor.nombre_ape,
+                                        },
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.proveedor,
+                                              "nombre_ape",
+                                              $event.target.value
+                                            )
+                                          },
+                                        },
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass: "mdl-textfield__label",
+                                          attrs: { for: "id_nombre_contacto" },
+                                        },
+                                        [_vm._v("nombre contacto")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdl-textfield__error" },
+                                        [_vm._v("Nombre inválido")]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                    },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.proveedor.telefono,
+                                            expression: "proveedor.telefono",
+                                          },
+                                        ],
+                                        staticClass: "mdl-textfield__input",
+                                        attrs: {
+                                          type: "tel",
+                                          id: "id_telefono",
+                                        },
+                                        domProps: {
+                                          value: _vm.proveedor.telefono,
+                                        },
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.proveedor,
+                                              "telefono",
+                                              $event.target.value
+                                            )
+                                          },
+                                        },
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass: "mdl-textfield__label",
+                                          attrs: { for: "id_telefono" },
+                                        },
+                                        [_vm._v("Teléfono")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdl-textfield__error" },
+                                        [
+                                          _vm._v(
+                                            "Número de teléfono\n                                                    invalido"
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                    },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.proveedor.email,
+                                            expression: "proveedor.email",
+                                          },
+                                        ],
+                                        staticClass: "mdl-textfield__input",
+                                        attrs: {
+                                          type: "email",
+                                          id: "id_correo",
+                                        },
+                                        domProps: {
+                                          value: _vm.proveedor.email,
+                                        },
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.proveedor,
+                                              "email",
+                                              $event.target.value
+                                            )
+                                          },
+                                        },
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass: "mdl-textfield__label",
+                                          attrs: { for: "id_correo" },
+                                        },
+                                        [_vm._v("Correos")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdl-textfield__error" },
+                                        [_vm._v("Correo inválido")]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "mdl-textfield mdl-js-textfield mdl-textfield--floating-label",
+                                    },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.proveedor.direccion,
+                                            expression: "proveedor.direccion",
+                                          },
+                                        ],
+                                        staticClass: "mdl-textfield__input",
+                                        attrs: {
+                                          type: "text",
+                                          id: "id_direccion",
+                                        },
+                                        domProps: {
+                                          value: _vm.proveedor.direccion,
+                                        },
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.proveedor,
+                                              "direccion",
+                                              $event.target.value
+                                            )
+                                          },
+                                        },
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass: "mdl-textfield__label",
+                                          attrs: { for: "id_direccion" },
+                                        },
+                                        [_vm._v("Dirección")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdl-textfield__error" },
+                                        [_vm._v("Dirección inválida")]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _vm._m(1),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "mdl-tooltip",
+                            attrs: { for: "btn-addAdmin" },
+                          },
+                          [_vm._v("Agregar Proveedor")]
+                        ),
+                        _vm._v(" "),
+                        _c("p"),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "mdl-tabs__panel", attrs: { id: "tabListAdmin" } },
+        [
+          _c("div", { staticClass: "mdl-grid" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop",
+              },
+              [
+                _c("div", { staticClass: "full-width panel mdl-shadow--2dp" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "full-width panel-tittle bg-success text-center tittles",
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Lista de Proveedores\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "full-width panel-content" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "mdl-list" },
+                      _vm._l(_vm.proveedores, function (proveedor) {
+                        return _c("tr", { key: proveedor.id }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mdl-list__item mdl-list__item--two-line",
+                            },
+                            [
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "mdl-list__item-primary-content",
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass:
+                                      "zmdi zmdi-account mdl-list__item-avatar",
+                                  }),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _vm._v(_vm._s(proveedor.codproveedor)),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdl-list__item-sub-title" },
+                                    [
+                                      _c("td", [
+                                        _vm._v(_vm._s(proveedor.nombre_ape)),
+                                      ]),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdl-list__item-sub-title" },
+                                    [
+                                      _c("td", [
+                                        _vm._v(
+                                          _vm._s(proveedor.direccion) + ": "
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _vm._v(_vm._s(proveedor.email) + ": "),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _vm._v(
+                                          _vm._s(proveedor.telefono) + " "
+                                        ),
+                                      ]),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _vm._m(3, true),
+                            ]
+                          ),
+                        ])
+                      }),
+                      0
+                    ),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mdl-tabs__tab-bar" }, [
+      _c(
+        "a",
+        {
+          staticClass: "mdl-tabs__tab is-active",
+          attrs: { href: "#tabNewAdmin" },
+        },
+        [_vm._v("NUEVO")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "mdl-tabs__tab", attrs: { href: "#tabListAdmin" } },
+        [_vm._v("LISTA")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "text-center" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary",
+          attrs: { id: "btn-addAdmin" },
+        },
+        [_c("i", { staticClass: "zmdi zmdi-plus" })]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { attrs: { action: "#" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "mdl-textfield mdl-js-textfield mdl-textfield--expandable",
+        },
+        [
+          _c(
+            "label",
+            {
+              staticClass: "mdl-button mdl-js-button mdl-button--icon",
+              attrs: { for: "searchAdmin" },
+            },
+            [_c("i", { staticClass: "zmdi zmdi-search" })]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "mdl-textfield__expandable-holder" }, [
+            _c("input", {
+              staticClass: "mdl-textfield__input",
+              attrs: { type: "text", id: "searchAdmin" },
             }),
             _vm._v(" "),
             _c("label", { staticClass: "mdl-textfield__label" }),

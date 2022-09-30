@@ -34,5 +34,7 @@ Route::post('/register', [RegisterController::class, 'create'])->name('register'
 Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
 Route::get('/tipo',[HomeController::class,'tipo'])->name('viewTipo');
 Route::get('/marca',[HomeController::class,'marca'])->name('viewMarca');
-
+Route::get('/proveedor',[HomeController::class,'proveedor'])->name('viewProveedor');
+Route::get('/articulo',[HomeController::class,'articulo'])->name('viewArticulo');
+Route::get('/compra',[HomeController::class,'compra'])->name('viewCompra');
 });

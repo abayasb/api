@@ -28,8 +28,9 @@ class Articulo extends Model
      */
     public function tipo(): BelongsTo
     {
-        return $this->belongsTo(Tipo::class);
+        return $this->belongsTo(Tipo::class,'id_tipo');
     }
+
     
     /**
      * Get the marca that owns the Articulo
@@ -38,7 +39,7 @@ class Articulo extends Model
      */
     public function marca(): BelongsTo
     {
-        return $this->belongsTo(Marca::class);
+        return $this->belongsTo(Marca::class,'id_marca');
     }
 
     /**

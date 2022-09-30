@@ -16,17 +16,9 @@ class CompraController extends Controller
      */
     public function index()
     {
-        $compra = Compra::all();
-        $data = [
-            'status'=>'OK',
-            'message'=>'No se encontraron registro'
-        ];
-        if (count($compra)!=0) {
-            $data['message']="Registros encontrados";
-            $data['compra'] = $compra;
-            return response()->json($data, 200);
-        }
-        return response()->json($data, 200);
+        $compra = Compra::with('Proveedor','Articulo')->get();
+       
+        return response()->json($compra);
         
     }
 

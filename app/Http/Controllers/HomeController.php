@@ -43,4 +43,12 @@ class HomeController extends Controller
     public function tipo(){ return view('layouts.templates.tipo'); }
 
     public function marca(){ return view('layouts.templates.marca'); }
+
+    public function proveedor(){ return view('layouts.templates.proveedor'); }
+
+    public function articulo(){ return view('layouts.templates.articulo'); }
+
+    public function compra(){ return view('layouts.templates.compra'); }
+
+    
 }

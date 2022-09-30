@@ -56,6 +56,7 @@ Route::prefix('v1')->group(function(){
     Route::put('/proveedor/{proveedor}',[ProveedorController::class,'update'])->name('updateProveedor');
     Route::delete('/proveedor/{proveedor}',[ProveedorController::class,'destroy'])->name('deleteProveedor');
     
+    Route::get('/articulo',[ArticuloController::class,'relationTipo'])->name('listRArticulo');
     Route::get('/articulo',[ArticuloController::class,'index'])->name('listArticulo');
     Route::post('/articulo', [ArticuloController::class,'store'])->name('addArticulo');
     Route::get('/articulo/{articulo}',[ArticuloController::class,'show'])->name('viewArticulo');

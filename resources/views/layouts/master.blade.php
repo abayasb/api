@@ -161,7 +161,7 @@
 
 						<li class="full-width divider-menu-h"></li>
 						<li class="full-width">
-							<a href="proveedor.html" class="full-width">
+							<a href="{{ route('viewProveedor') }}" class="full-width">
 								<div class="navLateral-body-cl">
 									<i class="zmdi zmdi-accounts"></i>
 								</div>
@@ -172,7 +172,7 @@
 						</li>
 						<li class="full-width divider-menu-h"></li>
 						<li class="full-width">
-							<a href="articulos.html" class="full-width">
+							<a href="{{ route('viewArticulo') }}" class="full-width">
 								<div class="navLateral-body-cl">
 									<i class="zmdi zmdi-washing-machine"></i>
 								</div>
@@ -194,7 +194,7 @@
 						</li>
 						<li class="full-width divider-menu-h"></li>
 						<li class="full-width">
-							<a href="compras.html" class="full-width">
+							<a href="{{ route('viewCompra') }}" class="full-width">
 								<div class="navLateral-body-cl">
 									<i class="zmdi zmdi-widgets"></i>
 								</div>

@@ -26,7 +26,7 @@ class Compra extends Model
     */
    public function proveedor(): BelongsTo
    {
-       return $this->belongsTo(Proveedor::class);
+       return $this->belongsTo(Proveedor::class, 'id_proveedor');
    }
 
    /**
@@ -36,6 +36,6 @@ class Compra extends Model
     */
    public function articulo(): BelongsTo
    {
-       return $this->belongsTo(Articulo::class);
+       return $this->belongsTo(Articulo::class,'id_articulo');
    }
 }

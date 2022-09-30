@@ -127,6 +127,7 @@ export default {
                 codtipo: this.tipo.codtipo,
                 detalle: this.tipo.detalle
             }
+            
             axios.post(url, params).then(response => {
                 this.tipo.push(response.data)
             });

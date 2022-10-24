@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SaveUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -19,9 +20,9 @@ class UserController extends Controller
         //
         $user = User::all();
         return response()->json([
-            'status'=>'OK',
-            'message'=>"Registro encontrado",
-            'user'=>$user
+            'status' => 'OK',
+            'message' => "Registro encontrado",
+            'user' => $user
         ]);
     }
 
@@ -33,7 +34,18 @@ class UserController extends Controller
      */
     public function store(SaveUserRequest $request)
     {
-        //
+        $request->validated();
+        $user = new User();
+        $user->username = $request->input('username');
+        $user->password = Hash::make($request->input('password'));
+        $user->id_rol = 1;
+        $user->id_persona = 1;
+        if ($user->save()) {
+            return response()->json([
+                'status' => 'OK',
+                'user' => $user
+            ]);
+        }
     }
 
     /**
@@ -44,7 +56,6 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
@@ -56,7 +67,6 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**
@@ -67,6 +77,5 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
     }
 }

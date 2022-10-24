@@ -7,6 +7,7 @@ use App\Http\Controllers\api\ProveedorController;
 use App\Http\Controllers\api\RolController;
 use App\Http\Controllers\api\TipoController;
 use App\Http\Controllers\api\CompraController;
+use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\api\VentaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +33,12 @@ Route::prefix('v1')->group(function(){
     Route::put('/persona/{persona}',[PersonaController::class,'update'])->name('updatePersona');
     Route::delete('/persona/{persona}',[PersonaController::class,'destroy'])->name('deletePersona');
     
+    Route::get('/usuario',[UserController::class, 'index']);
+    Route::post('/usuario',[UserController::class,'store'])->name('addUsers');
+    Route::get('/usuario/{usuario}',[UserController::class,'show'])->name('viewUsers');
+    Route::put('/usuario/{usuario}',[UserController::class,'update'])->name('updateUsers');
+    Route::delete('/usuario/{usuario}',[UserController::class,'destroy'])->name('deleteUsers');
+
     Route::get('/rol',[RolController::class,'index'])->name('listRol');
     Route::post('/rol',[RolController::class,'store'])->name('addRol');
     Route::get('/rol/{rol}',[RolController::class,'show'])->name('viewRol');
